@@ -1,0 +1,63 @@
+AllAzimuthStatistics    Calculation of All Statistics of the Azimuths
+AllModuleStatistics     Calculation of All Statistics of the Modules.
+ArithmeticMean          Calculation of Mean Arithmetic modules
+CircularDispersal       Calculation of the Circular Dispersal of the
+                        Azimuths
+CircularStandardDeviation
+                        Calculation of the Circular Standard Deviation
+                        of the azimuths
+CircularVariance        Calculation of the Circular Variance of the
+                        azimuths
+DrawDensityMap          Graphic representation of a point Density Map
+DrawDistribution        Graphic representation of the Distribution of
+                        the azimuths
+DrawHistogram           Graphic representation of the histogram of the
+                        azimuth distribution
+DrawModuleAndAzimuthDistribution
+                        Graphic representation of Module and Azimuth
+                        Distribution
+DrawPoints              Graphic representation of Points
+DrawVectors             Graphic representation of the Vectors
+KurtosisAzimuthCoefficient
+                        Calculation of the Kurtosis Coefficient of the
+                        azimuths
+KurtosisModuleCoefficient
+                        Calculation of the Kurtosis Coefficient of the
+                        modules
+LoadData                Data loading and conversion of polar
+                        coordinates, rectangular coordinates, and
+                        measured and real coordinates
+MaxValue                Calculation of the Maximum Value of the modules
+MeanAzimuth             Calculation of the Mean Azimuth of the azimuths
+MeanModule              Calculation of the Mean Module of the azimuths
+MinValue                Calculation of the Minimum Value of the modules
+ModulePopulationStandardDeviation
+                        Calculation of the Population Standard
+                        Deviation of the modules
+ModulePopulationVariance
+                        Calculation of the Population Variance of the
+                        modules
+ModuleStandardDeviation
+                        Calculation of the Standard Deviation of the
+                        modules
+ModuleSum               Calculation of the Sum of the Modules
+ModuleVariance          Calculation of the Variance of the modules
+NumberOfElements        Calculation of the Number of Elements of the
+                        modules
+Range                   Calculation of the Range of the modules
+RaoTest                 Rao Test. Formal test of uniformity
+RayleighTest            Rayleigh Test. Formal test of uniformity
+SkewnessAzimuthCoefficient
+                        Calculation of the Skewness Coefficient of the
+                        azimuths
+SkewnessModuleCoefficient
+                        Calculation of the Skewness Coefficient of the
+                        modules
+StandardError           Calculation of the Standard Error of the
+                        modules
+ValuationOfUniformity   Graphical assessment of uniformity
+VecStatGraphs2D-package
+                        Vector analysis using graphical and analytical
+                        methods in 2D.
+VonMisesParameter       Calculation of Von Mises concentration
+                        parameter of theazimuths
