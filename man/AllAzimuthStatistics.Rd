@@ -1,7 +1,7 @@
 \name{AllAzimuthStatistics}
 \alias{AllAzimuthStatistics}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Calculation of All Statistics of the Azimuths}
+\title{Calculation of all statistics of the azimuths}
 \description{
    This function calculates several circular data statistics from a set of input azimuths.
 }
@@ -13,13 +13,12 @@ AllAzimuthStatistics(azimuths)
   \item{azimuths}{Vector containing the values of the azimuths}
 }
 \details{
-   One way to get a set of azimuths from X and Y coordinates of the origin position and end position 
-   (coordinates X and Y of the vector), it is using the \code{\link{LoadData}} function.
+   One way to obtain a set of azimuths from X and Y coordinates of the vectors is to use the \code{\link{LoadData}} function.
    
    The statistics calculated are: \code{Mean Azimuth, Mean Module, Circular Variance, Circular Standard Deviation, Circular Dispersal, Von Mises Parameter, Kurtosis Coefficient, Skewness Coefficient.}
 }
 \value{
-   The value All Azimuth Statistics of all input azimuths.
+   The value all azimuth statistics of all input azimuths.
 }
 \references{
    Bachelet E. (1981) Circular statistics in biology. London. London Academic Press.
@@ -34,9 +33,9 @@ AllAzimuthStatistics(azimuths)
 
    Russell G.S. , Levitin D.J. (1995) An expanded table of probability values for Rao spacing test. Communications in Statistics: Simulation and Computation, 24(4), 879-888.
 
-   Website \url{http://fegtepinta.byethost11.com/}
+   Website \url{http://gim.unex.es/VecStatGraphs2D/}
 }
-\author{Juan Carlos Ruiz Cuetos \email{bilba_t@hotmail.com}, Maria Eugenia Polo Garcia \email{mepolo@unex.es}, Pablo Garcia Rodriguez \email{pablogr@unex.es}}
+\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo , M.E., \email{mepolo@unex.es}, Rodriguez, P.G.\email{pablogr@unex.es}}
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

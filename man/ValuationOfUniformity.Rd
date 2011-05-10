@@ -3,8 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Graphical assessment of uniformity}
 \description{
-   This function generates a graph that allows you to see quickly if the data distribution can be considered uniform
-   or if it departs from the uniformity.
+   This function generates a graph that allows one to determine quickly the azimuths distribution can be considered uniform.
 }
 \usage{
 ValuationOfUniformity(azimuths)
@@ -14,26 +13,23 @@ ValuationOfUniformity(azimuths)
   \item{azimuths}{Vector containing the values of the azimuths}
 }
 \details{
-   The graphic is created by placing in increasing order n pairs of points from the calculation of the linear order statistics of the azimuths.
+   The graphic is created by placing in increasing order of n pairs of points from the calculation of the linear order statistics of the azimuths.
    
-   If the data fit to the uniform distribution, the points should lie along 45 grades line passing through the origin. 
+   If the data fit to the uniform distribution, the points should lie along a 45 grades line passing through the origin. 
    
-   The arbitrary choice of the origin of the azimuths may induces a misunderstanding in the interpretation. We can solve this problem
-   adding the unit to each element of the pair of values of the first 20 percent of points, and subtracting the unit to each element 
-   of the pair of values of the last 20 percent.
+   The arbitrary choice of the origin of the azimuths may lead to a misunderstanding in the interpretation. We can solve this problem by adding the unit to each element of the pair of values of the first 20 percent of points and by subtracting the unit to each element of the pair of values of the last 20 percent. All these new points are plotted.
    
-   One way to get a set of azimuths from X and Y coordinates of the origin position and end position 
-   (coordinates X and Y of the vector), it is using the \code{\link{LoadData}} function.
+   One way to obtain a set of azimuths from X and Y coordinates of the vectors is to use the \code{\link{LoadData}} function.
 }
 \value{
-  This function returns no value.  A graph is displayed to show if the hypothesis of uniform distribution can be accepted or rejected.
+  This function returns no value. A graph is displayed to show whether the hypothesis of uniform distribution can be accepted or rejected.
 }
 \references{
    Fisher N.I. (1995) Statistical analysis of circular data. Cambridge. Cambridge University Press.
    
-   Website \url{http://fegtepinta.byethost11.com/}
-}
-\author{Juan Carlos Ruiz Cuetos \email{bilba_t@hotmail.com}, Maria Eugenia Polo Garcia \email{mepolo@unex.es}, Pablo Garcia Rodriguez \email{pablogr@unex.es}}
+    Website \url{http://gim.unex.es/VecStatGraphs2D/}
+} 
+\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

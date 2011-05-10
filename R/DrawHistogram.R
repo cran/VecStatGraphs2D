@@ -28,6 +28,8 @@ function(azimuths, TamClasses = 15, Direction = 2){
 	box(lty = 1, col = 'black')
 	grid();
 	
+	
+
 	DrawCircle(0,0,d1,border="black",lty=1,lwd=1);
 	DrawCircle(0,0,d2,border="black",lty=3,lwd=1);
 	DrawCircle(0,0,d3,border="black",lty=3,lwd=1);

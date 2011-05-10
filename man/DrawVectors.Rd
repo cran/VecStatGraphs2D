@@ -1,31 +1,28 @@
 \name{DrawVectors}
 \alias{DrawVectors}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Graphic representation of the Vectors}
+\title{Graphic representation of the vectors}
 \description{
-   This function creates a graph, which shows an arrow for each sample. The graph represents the situation of 
-   the origin and end nodes of the every vector. In order to represent this graph, the input data must be of 
-   the measured and real type (type=3).
+   This function creates a graph that shows an arrow for each vector. The graph represents the situation of every vector by its coordinates. To represent this graph, the input data must be of the measured and real type (type=3).
 }
 \usage{
 DrawVectors(measured_data_, real_data_)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{measured_data_}{Matrix containing the coordinates measured}
-  \item{real_data_}{Matrix containing the coordinates real}
+  \item{measured_data_}{Matrix containing the measured coordinates}
+  \item{real_data_}{Matrix containing the real coordinates}
 }
 \details{
-   The measured values and real values can not be calculated, must be introduced as input data, although it is advisable to use 
-   \code{\link{LoadData}} for obtain vector of X coordinate and Y coordinate and azimuths of measured values.
+   The measured values and real values cannot be calculated. They must be introduced as input data, although it is advisable to use \code{\link{LoadData}} for obtain the vectors of the X and Y coordinates as well as the azimuths of the measured values.
 }
 \value{
-   This function returns no value, creates a graph that represents the vectors of the input data.
+   This function returns no value and creates a graph that represents the vectors of the input data.
 }
 \references{
-   Website \url{http://fegtepinta.byethost11.com/}
+   Website \url{http://gim.unex.es/VecStatGraphs2D/}
 }
-\author{Juan Carlos Ruiz Cuetos \email{bilba_t@hotmail.com}, Maria Eugenia Polo Garcia \email{mepolo@unex.es}, Pablo Garcia Rodriguez \email{pablogr@unex.es}}
+\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

@@ -1,10 +1,9 @@
 Package: VecStatGraphs2D
 Type: Package
-Title: Vector analysis using graphical and analytical methods in 2D.
-Version: 1.2
-Date: 2010-06-08
-Author: Juan Carlos Ruiz Cuetos, Maria Eugenia Polo Garcia, Pablo
-        Garcia Rodriguez
+Title: Vector analysis using graphical and analytical methods in 2D
+Version: 1.4
+Date: 2011-05-10
+Author: Ruiz-Cuetos, J.C., Polo, M.E., Rodriguez, P.G.
 Maintainer: Juan Carlos Ruiz Cuetos <bilba_t@hotmail.com>, Pablo Garcia
         Rodriguez <pablogr@unex.es>
 Depends: R (>= 2.10.1), MASS
@@ -20,7 +19,7 @@ Description: This package performs a 2D statistical analysis, both
         of graphing: histograms, maps of distributions, point maps,
         vector maps, density maps, distribution modules and azimuths.
 License: GPL-3
-URL: http://fegtepinta.byethost11.com/
-Packaged: 2010-08-13 10:19:42 UTC; Juan Carlos
+URL: http://gim.unex.es/VecStatGraphs2D/
 Repository: CRAN
-Date/Publication: 2010-08-13 18:30:36
+Packaged: 2011-05-11 19:23:11 UTC; juancarlos
+Date/Publication: 2011-05-23 16:57:57

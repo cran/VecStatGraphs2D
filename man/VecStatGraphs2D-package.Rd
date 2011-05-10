@@ -6,18 +6,14 @@
 Vector analysis using graphical and analytical methods in 2D.
 }
 \description{
-    This package performs a 2D statistical analysis, both numerical and graphic, of a set of vectors.   Since a vector has two components 
-	(module and azimuth) vector analysis is performed in three stages: modules are analyzed by means of linear statistics, azimuths are 
-	analyzed by circular statistics, and the joint analysis of modules and azimuths is done using density maps that allow detecting another 
-	distribution properties (I.e. anisotropy) and outliers. Tests and circular statistic parameters have associated a full range of graphing: 
-	histograms, maps of distributions, point maps, vector maps, density maps, distribution modules and azimuths.
+    This package performs a 2D statistical analysis, both numerical and graphic, of a set of vectors. Because a vector has two components, module and azimuth, vector analysis is performed in three stages. First, modules are analyzed using linear statistics. Second, azimuths are analyzed by circular statistics. Third a joint analysis of modules and azimuths is performed using density maps that allow detection of other distribution properties (i.e. anisotropy) and outliers. Tests and circular statistic parameters are accompanied by a full range of graphing: histograms, maps of distributions, point maps, vector maps, density maps, distribution modules and azimuths.
 }
 \details{
 \tabular{ll}{
 Package: \tab VecStatGraphs2D\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2010-06-08\cr
+Version: \tab 1.4\cr
+Date: \tab 2011-05-10\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab yes\cr
 }
@@ -41,7 +37,7 @@ LazyLoad: \tab yes\cr
 
    Russell G.S. , Levitin D.J. (1995) An expanded table of probability values for Rao spacing test. Communications in Statistics: Simulation and Computation, 24(4), 879-888.
 
-   Website \url{http://fegtepinta.byethost11.com/}
+   Website \url{http://gim.unex.es/VecStatGraphs2D/}
 }
 
 \keyword{ package }

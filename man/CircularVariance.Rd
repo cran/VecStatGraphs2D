@@ -3,7 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Calculation of the Circular Variance of the azimuths}
 \description{
-   This function calculates the Circular Variance from a set of input azimuths.
+   This function calculates the circular variance from a set of input azimuths.
 }
 \usage{
 CircularVariance(azimuths)
@@ -13,18 +13,17 @@ CircularVariance(azimuths)
   \item{azimuths}{Vector containing the values of the azimuths}
 }
 \details{
-   One way to get a set of azimuths from X and Y coordinates of the origin position and end position 
-   (coordinates X and Y of the vector), it is using the \code{\link{LoadData}} function.
+   One way to get a set of azimuths from X and Y coordinates of the vectors is to use the \code{\link{LoadData}} function.
 }
 \value{
-   The value of the Circular Variance of all input azimuths. This value ranges between 0 and 1.
+   The value of the circular variance of all input azimuths. This value ranges between 0 and 1.
 }
 \references{
    Fisher N.I. (1995) Statistical analysis of circular data. Cambridge. Cambridge University Press.
    
-   Website \url{http://fegtepinta.byethost11.com/}
+   Website \url{http://gim.unex.es/VecStatGraphs2D/}
 }
-\author{Juan Carlos Ruiz Cuetos \email{bilba_t@hotmail.com}, Maria Eugenia Polo Garcia \email{mepolo@unex.es}, Pablo Garcia Rodriguez \email{pablogr@unex.es}}
+\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

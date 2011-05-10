@@ -1,7 +1,7 @@
 \name{RaoTest}
 \alias{RaoTest}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Rao Test. Formal test of uniformity}
+\title{Rao test. Formal test of uniformity}
 \description{
    This function performs the Rao test of uniformity.
 }
@@ -11,16 +11,12 @@ RaoTest(azimuths, Alpha = 0.01)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{azimuths}{Vector containing the values of the azimuths}
-  \item{Alpha}{Value used to obtain the Rao Value of the Rao Table. 
-			The values can be 0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 0.9.
-			The default is 0.01.}
+  \item{Alpha}{Significance level. Value used to obtain the Rao Value of the Rao Table. The values can be 0.001, 0.005, 0.01, 0.05, 0.1, 0.5, or 0.9. The default is 0.01.}
 }
 \details{
-   For a uniform distribution, the space between points should be about \code{360/n}. If the space 
-   deviates much from this value, the probability that the data belong to a uniform distribution is reduced.
+   For a uniform distribution, the space between points should be approximately \code{360/n}. If the space deviates much from this value, then the probability that the data belong to a uniform distribution is reduced.
 
-   One way to get a set of azimuths from X and Y coordinates of the origin position and end position 
-   (coordinates X and Y of the vector), it is using the \code{\link{LoadData}} function.
+   One way to obtain a set of azimuths from X and Y coordinates of the vectors is to use the \code{\link{LoadData}} function.
    
    Typical usages are \preformatted{
     RaoTest(azimuths, \dots)
@@ -28,7 +24,7 @@ RaoTest(azimuths, Alpha = 0.01)
    }
 }
 \value{
-  Returns the probability value, and indicates whether or not to accept the hypothesis of uniformity.
+  Returns the probability value and indicates whether the hypothesis of uniformity can be accepted.
 }
 \references{
    Bachelet E. (1981) Circular statistics in biology. London. London Academic Press.
@@ -39,9 +35,9 @@ RaoTest(azimuths, Alpha = 0.01)
 
    Russell G.S. , Levitin D.J. (1995) An expanded table of probability values for Rao spacing test. Communications in Statistics: Simulation and Computation, 24(4), 879-888.
 
-   Website \url{http://fegtepinta.byethost11.com/}
-}
-\author{Juan Carlos Ruiz Cuetos \email{bilba_t@hotmail.com}, Maria Eugenia Polo Garcia \email{mepolo@unex.es}, Pablo Garcia Rodriguez \email{pablogr@unex.es}}
+ Website \url{http://gim.unex.es/VecStatGraphs2D/}
+} 
+\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

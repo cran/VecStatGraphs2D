@@ -15,13 +15,15 @@ function(azimuths){
 		print("****            CIRCULAR STATISTICS - AZIMUTH            ****");
 		print("****                                                     ****");
 		print("*************************************************************");
-	
+                               
+     
+	    print(paste("NUMBER OF OBSERVATIONS= ",n_elements));
    		print(paste("MEAN AZIMUTH = ",m_azimuth));
 		print(paste("MEAN MODULE = ",m_module));
    		print(paste("CIRCULAR STANDARD DEVIATION = " ,s_deviation));
 		print(paste("CIRCULAR VARIANCE = ",c_variance));
         print(paste("VON MISES PARAMETER = ",vm_parameter));
-        print(paste("CIRCULAR DISPERSION = ",c_dispersal));
+        print(paste("CIRCULAR DISPERSAL = ",c_dispersal));
         print(paste("SKEWNESS COEFFICIENT OF AZIMUTH = ",s_azimuth));
 		print(paste("KURTOSIS COEFFICIENT OF AZIMUTH = ",k_azimuth));
 

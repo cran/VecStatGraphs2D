@@ -1,7 +1,7 @@
 \name{KurtosisModuleCoefficient}
 \alias{KurtosisModuleCoefficient}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Calculation of the Kurtosis Coefficient of the modules}
+\title{Calculation of the kurtosis coefficient of the modules}
 \description{
    This function calculates the Kurtosis coefficient, which characterizes the shape of the distribution from a set of input modules.
 }
@@ -13,18 +13,17 @@ KurtosisModuleCoefficient(modules)
   \item{modules}{Vector containing the values of the modules}
 }
 \details{
-   One way to get a set of modules from X and Y coordinates of the origin position and end position 
-   (coordinates X and Y of the vector), it is using the \code{\link{LoadData}} function.
+   One way to obtain a set of modules from X and Y coordinates of the vectors is to use the \code{\link{LoadData}} function.
    
-   The Kurtosis coefficient indicates how of sharp or flat  is a distribution.
+   The Kurtosis coefficient is a measure of whether the data are flat or peaked relative to the normal distribution.
 }
 \value{
-   The value Kurtosis coefficient of all input modules
+   The value of the kurtosis coefficient of all input modules
 }
 \references{
-   Website \url{http://fegtepinta.byethost11.com/}
+   Website \url{http://gim.unex.es/VecStatGraphs2D/}
 }
-\author{Juan Carlos Ruiz Cuetos \email{bilba_t@hotmail.com}, Maria Eugenia Polo Garcia \email{mepolo@unex.es}, Pablo Garcia Rodriguez \email{pablogr@unex.es}}
+\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

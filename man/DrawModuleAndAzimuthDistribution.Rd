@@ -1,31 +1,26 @@
 \name{DrawModuleAndAzimuthDistribution}
 \alias{DrawModuleAndAzimuthDistribution}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Graphic representation of Module and Azimuth Distribution}
+\title{Graphic representation of module and azimuth distributions}
 \description{
-   This function creates a graph, that allows us to check the angular and linear magnitudes simultaneously,
-   also indicated the Mean Azimuth (red color).
+   This function creates a graph that allows us to check the angular and linear magnitudes simultaneously. The mean azimuth is plotted by a red arrow.
 }
 \usage{
 DrawModuleAndAzimuthDistribution(data_x, data_y, Direction = 2)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{data_x}{Vector containing the values of the X coordinate}
-  \item{data_y}{Vector containing the values of the Y coordinate}
-  \item{Direction}{Integer value that indicates the direction of the data.
-			Direction  1 = Mathematical direction (0 grades E anticlockwise),
-			direction 2 = Topographical direction (0 grades N clockwise). The default value is 2}
+  \item{data_x}{Vector containing the values of the X coordinates}
+  \item{data_y}{Vector containing the values of the Y coordinates}
+  \item{Direction}{Integer value that indicates the direction of the data. Direction  1 = the mathematical direction (0 grades E counterclockwise). Direction 2 = the topographical direction (0 grades N clockwise). The default value is 2.}
 }
 \details{
-   The graph draws a line for each of the samples. The lines will have origin in (0,0) and end at coordinates (X, Y).
-   The concentric circumferences allow us to identify linear magnitudes, and the legend of the angles allows to know the angular magnitudes value.
-   
-   It is very important to work always with the same direction, because if the data are loaded in Topographical direction, 
-   and Graphic representation of the module and azimuth distribution in Mathematical direction, the resulting graph is wrong.
-   
-   One way to get a vector of X and Y coordinate from modules and azimuths of the origin position and end position 
-   (coordinates X and Y of the error), it is using the \code{\link{LoadData}} function.
+   The graph draws a line for each vector. Each vector is moved to a common origin (0, 0) without changing its azimuth and module. The concentric circumferences allow us to identify linear magnitudes, and the legend of the angles allows us to determine the angular magnitude values.
+
+It is very important to work always with the same direction. If the data are loaded in topographical direction and the graphic representation of the module and azimuth distribution in the mathematical direction, then the resulting graph will be wrong.
+
+One way to obtain a set of X and Y coordinates of the vectors is to use the 
+\code{\link{LoadData}} function.
    
    Typical usages are \preformatted{
     DrawModuleAndAzimuthDistribution(data_x, data_y, \dots)
@@ -34,12 +29,12 @@ DrawModuleAndAzimuthDistribution(data_x, data_y, Direction = 2)
    
 }
 \value{
-   This function returns no value, creates a graph that represents module and azimuth distribution
+   This function returns no value and creates a graph that represents module and azimuth distributions.
 }
 \references{
-   Website \url{http://fegtepinta.byethost11.com/}
-}
-\author{Juan Carlos Ruiz Cuetos \email{bilba_t@hotmail.com}, Maria Eugenia Polo Garcia \email{mepolo@unex.es}, Pablo Garcia Rodriguez \email{pablogr@unex.es}}
+    Website \url{http://gim.unex.es/VecStatGraphs2D/}
+} 
+\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}} 
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

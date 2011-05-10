@@ -147,12 +147,12 @@ function(azimuths,Alpha =0.01 ){
 			if(value>=L){
 				print(paste("Test Statistic =",round(L,3)));
 				print(paste("Table value=",value));
-				print("Rao Test: hypothesis of uniformity accepted ");
+				print("Rao Test: hypothesis of uniformity is accepted ");
 			}
 			else{
 				print(paste("Test Statistic =",round(L,3)));
 				print(paste("Table value=",value));
-				print("Rao Test: hypothesis of uniformity rejected ");
+				print("Rao Test: hypothesis of uniformity is rejected ");
 			}
 		}	
 	}

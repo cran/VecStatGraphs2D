@@ -1,9 +1,9 @@
 \name{NumberOfElements}
 \alias{NumberOfElements}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Calculation of the Number of Elements of  the modules}
+\title{Calculation of the number of elements of  the modules}
 \description{
-  This function calculates the Number of Elements of a set of modules
+  This function calculates the number of elements of a set of modules
 }
 \usage{
 NumberOfElements(modules)
@@ -13,16 +13,15 @@ NumberOfElements(modules)
   \item{modules}{Vector containing the values of the modules}
 }
 \details{
-   One way to get a set of modules from X and Y coordinates of the origin position and end position 
-   (coordinates X and Y of the vector), it is using the \code{\link{LoadData}} function.
+   One way to obtain a set of modules from X and Y coordinates of the vectors is to use the \code{\link{LoadData}} function.
 }
 \value{
    The number of elements of all input modules.
 }
 \references{
-   Website \url{http://fegtepinta.byethost11.com/}
-}
-\author{Juan Carlos Ruiz Cuetos \email{bilba_t@hotmail.com}, Maria Eugenia Polo Garcia \email{mepolo@unex.es}, Pablo Garcia Rodriguez \email{pablogr@unex.es}}
+ Website \url{http://gim.unex.es/VecStatGraphs2D/}
+} 
+\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

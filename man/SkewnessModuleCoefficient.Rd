@@ -1,7 +1,7 @@
 \name{SkewnessModuleCoefficient}
 \alias{SkewnessModuleCoefficient}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Calculation of the Skewness Coefficient of the modules}
+\title{Calculation of the skewness coefficient of the modules}
 \description{
    This function calculates the skewness coefficient and indicates the symmetry of the distribution from a set of input modules.
 }
@@ -13,18 +13,17 @@ SkewnessModuleCoefficient(modules)
   \item{modules}{Vector containing the values of the modules}
 }
 \details{
-   One way to get a set of modules from X and Y coordinates of the origin position and end position 
-   (coordinates X and Y of the vector), it is using the \code{\link{LoadData}} function.
+   One way to obtain a set of modules from X and Y coordinates of the vectors is to use the \code{\link{LoadData}} function.
    
-   The normal distribution is symmetric if the skewness is 0.
+   A normal data distribution presents a skewness coefficient equal to 0.
 }
 \value{
    The value skewnwess coefficient of all input modules
 }
 \references{
-   Website \url{http://fegtepinta.byethost11.com/}
-}
-\author{Juan Carlos Ruiz Cuetos \email{bilba_t@hotmail.com}, Maria Eugenia Polo Garcia \email{mepolo@unex.es}, Pablo Garcia Rodriguez \email{pablogr@unex.es}}
+ Website \url{http://gim.unex.es/VecStatGraphs2D/}
+} 
+\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

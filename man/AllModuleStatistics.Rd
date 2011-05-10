@@ -1,7 +1,7 @@
 \name{AllModuleStatistics}
 \alias{AllModuleStatistics}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Calculation of All Statistics of the Modules.}
+\title{Calculation of all statistics of the modules.}
 \description{
    This function calculates several statistics from a set of input modules.
 }
@@ -13,18 +13,17 @@ AllModuleStatistics(modules)
   \item{modules}{Vector containing the values of the modules}
 }
 \details{
-   One way to get a set of azimuths from X and Y coordinates of the origin position and end position 
-   (coordinates X and Y of the vector), it is using the \code{\link{LoadData}} function.
+   One way to obtain a set of modules from X and Y coordinates of the vectors is to use the \code{\link{LoadData}} function.
    
    The statistics calculated are: \code{Number Of Elements, Max Value, Min Value, Range, Module Sum, Mean Arithmetic, Standard Error, Standard Deviation Module, Variance Module, Variance Module Population, Standard Deviation Module Population, Skewness Module Coefficient, Kurtosis Module Coefficient.}
 }
 \value{
-   The value All Module Statistics of all input modules.
+   The value all module statistics of all input modules.
 }
 \references{
-   Website \url{http://fegtepinta.byethost11.com/}
+   Website \url{http://gim.unex.es/VecStatGraphs2D/}
 }
-\author{Juan Carlos Ruiz Cuetos \email{bilba_t@hotmail.com}, Maria Eugenia Polo Garcia \email{mepolo@unex.es}, Pablo Garcia Rodriguez \email{pablogr@unex.es}}
+\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~

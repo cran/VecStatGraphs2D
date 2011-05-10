@@ -1,5 +1,5 @@
 DrawDensityMap <-
-function(data_x,data_y,PercentajeOutliers = 5, PaintPoint = FALSE, Div = 250, HarmonicMean = FALSE, PaintAxis = FALSE){
+function(data_x,data_y,PercentageOutliers = 5, PaintPoint = FALSE, Div = 250, HarmonicMean = FALSE, PaintAxis = FALSE){
 	require(MASS)
 	
 	data_=array(c(data_x,data_y),dim=c(length(data_x),2))
@@ -27,7 +27,7 @@ function(data_x,data_y,PercentajeOutliers = 5, PaintPoint = FALSE, Div = 250, Ha
 		else{
 			Vec=AllHarmonicMean(data_);
 		}
-		cant=as.integer(length(data_[,1])*(PercentajeOutliers/100));
+		cant=as.integer(length(data_[,1])*(PercentageOutliers/100));
 		data_=data_[ order(Vec,decreasing=TRUE), ]
 	
 		for(i in 1:length(data_[,1])){

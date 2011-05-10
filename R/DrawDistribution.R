@@ -25,6 +25,7 @@ function(azimuths,Direction = 2){
 	box(lty = 1, col = 'black')
 	grid();
 	
+	
 	DrawCircle(center_x,center_y,d1,border="black",lty=1,lwd=1);
 	
 	if(type==0){
@@ -77,14 +78,14 @@ function(azimuths,Direction = 2){
 	n=NumberOfElements(azimuths);
 	module=MeanModule(azimuths);
 	vm=VonMisesParameter(azimuths);
-	ci=ConfidenceInterval(n,azimuth,module,vm);
+	ci=ConfidenceInterval(n,azimuth,module,vm); 
 	
 	if(type==0){
 		xmin=cos(ToRadians(ci[1]))*(d1+(d1*0.1));
 		xmax=cos(ToRadians(ci[2]))*(d1+(d1*0.1));
 		ymin=sin(ToRadians(ci[1]))*(d1+(d1*0.1));
 		ymax=sin(ToRadians(ci[2]))*(d1+(d1*0.1));
-		DrawArc(center_x,center_y,radius=d1+(d1*0.1),angle1=ToRadians(ci[1]),angle2 = ToRadians(ci[2]),n=35,col="red",lwd=2);
+		DrawArc(center_x,center_y,radius=d1+(d1*0.1),angle1=ToRadians(ci[1]),angle2 = ToRadians(ci[2]),n=35,col="red",lwd=2);     
 	}
 	else{
 		xmin=cos(ToRadians(90-ci[1]))*(d1+(d1*0.1));

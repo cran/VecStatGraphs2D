@@ -3,9 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Graphic representation of the histogram of the azimuth distribution}
 \description{
-   This function creates a graph, that represents a circumference divided in sectors of different radius.
-   The radius represents the percentage of azimuth data which belongs to each sector. Each portion represents
-   the azimuths that exist between the angles formed by the sides of the portion.
+   This function creates a graph that represents a circumference divided into sectors with different radii. Each radius represents the percentage of azimuth data that belong to each sector. Each portion represents the azimuths that exist between the angles formed by the sides of the portion.
 }
 \usage{
 DrawHistogram(azimuths, TamClasses = 15, Direction = 2)
@@ -14,18 +12,14 @@ DrawHistogram(azimuths, TamClasses = 15, Direction = 2)
 \arguments{
   \item{azimuths}{Vector containing the values of the azimuths}
   \item{TamClasses}{Integer value that represents the size of each portion. The default value is 15.}
-  \item{Direction}{Integer value that indicates the direction of the data.
-			Direction  1 = Mathematical direction (0 grades E anticlockwise),
-			direction 2 = Topographical direction (0 grades N clockwise). The default value is 2}
+  \item{Direction}{Integer value that indicates the direction of the data. Direction 1 = the mathematical direction (0 grades E counterclockwise). Direction 2 = the topographical direction (0 grades N clockwise). The default value is 2.}
 }
 \details{
-   It is very important to work always with the same direction, because if the data are loaded in Topographical direction, 
-   and Graphic representation of the Histogram in Mathematical direction, the resulting graph is wrong.
+   It is very important to always work with the same direction. If the data are loaded in topographical direction and the graphic representation of the histogram in mathematical direction, then the resulting graph will be wrong.
 
-   This function allows seeing where the more concentrated points are.
-   
-   One way to get a set of azimuths from X and Y coordinates of the origin position and end position 
-   (coordinates X and Y of the vector), it is using the \code{\link{LoadData}} function.
+This function shows where the highest concentration of points is located.
+
+One way to obtain a set of azimuths from X and Y coordinates of the vectors is to use the \code{\link{LoadData}} function.
    
    Typical usages are \preformatted{
     DrawHistogram(azimuths, \dots)
@@ -35,12 +29,12 @@ DrawHistogram(azimuths, TamClasses = 15, Direction = 2)
    
 }
 \value{
-   This function returns no value, creates a graph that represents a circular histogram of the input data.
+   This function returns no value and creates a graph that represents a circular histogram of the input data.
 }
 \references{
-   Website \url{http://fegtepinta.byethost11.com/}
-}
-\author{Juan Carlos Ruiz Cuetos \email{bilba_t@hotmail.com}, Maria Eugenia Polo Garcia \email{mepolo@unex.es}, Pablo Garcia Rodriguez \email{pablogr@unex.es}}
+    Website \url{http://gim.unex.es/VecStatGraphs2D/}
+} 
+\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}} 
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
