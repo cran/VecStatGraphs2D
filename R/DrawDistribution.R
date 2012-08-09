@@ -20,7 +20,7 @@ function(azimuths,Direction = 2){
 	center_y=0;
 	
 	plot(range(length_,-length_),range(length_,-length_), type="n",xlab="", ylab="", bty="n",col.axis="white");
-	title(main="RAW DATA DISTRIBUTION",sub="A symbol (circle) is plotted \n for each observation.",cex.sub = 0.75, font.sub = 3, col.sub = "black");
+	#title(main="RAW DATA DISTRIBUTION",sub="A symbol (circle) is plotted \n for each observation.",cex.sub = 0.75, font.sub = 3, col.sub = "black");
 	
 	box(lty = 1, col = 'black')
 	grid();

@@ -6,12 +6,12 @@
    This function creates a graph that represents a circumference divided into sectors with different radii. Each radius represents the percentage of azimuth data that belong to each sector. Each portion represents the azimuths that exist between the angles formed by the sides of the portion.
 }
 \usage{
-DrawHistogram(azimuths, TamClasses = 15, Direction = 2)
+DrawHistogram(azimuths, ClassSize = 15, Direction = 2)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{azimuths}{Vector containing the values of the azimuths}
-  \item{TamClasses}{Integer value that represents the size of each portion. The default value is 15.}
+  \item{ClassSize}{Integer value that represents the size of each portion. The default value is 15.}
   \item{Direction}{Integer value that indicates the direction of the data. Direction 1 = the mathematical direction (0 grades E counterclockwise). Direction 2 = the topographical direction (0 grades N clockwise). The default value is 2.}
 }
 \details{
@@ -23,7 +23,7 @@ One way to obtain a set of azimuths from X and Y coordinates of the vectors is t
    
    Typical usages are \preformatted{
     DrawHistogram(azimuths, \dots)
-    DrawHistogram(azimuths, TamClasses = 20, \dots)
+    DrawHistogram(azimuths, ClassSize = 20, \dots)
     ......
    }
    
@@ -45,9 +45,9 @@ One way to obtain a set of azimuths from X and Y coordinates of the vectors is t
 }
 \examples{
    FileName<-system.file("data/RectangularData.txt", package="VecStatGraphs2D")
-   dat<-LoadData(FileName, Type=1, Direction=2)
+   dat<-LoadData(FileName, Type=2, Direction=2)
    azimuths<-dat[,2]
-   DrawHistogram(azimuths, TamClasses=15)
+   DrawHistogram(azimuths, ClassSize=15)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

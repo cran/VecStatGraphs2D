@@ -21,7 +21,7 @@ function(data_x,data_y,PercentageOutliers = 5, HarmonicMean = FALSE){
 	center_y=0;
 	
 	plot(range(length_x_min,length_x_max),range(length_y_min,length_y_max),type="p",xlab="", ylab="", bty="n",axes=FALSE);
-	title(main="POINTS",sub=paste("End nodes of the error vectors form a cloud of points. \n Outliers are plotted in red.",PercentageOutliers,"% points with value." ),cex.sub = 0.75, font.sub = 3, col.sub = "black");
+	#title(main="POINTS",sub=paste("End nodes of the error vectors form a cloud of points. \n Outliers are plotted in red.",PercentageOutliers,"% points with value." ),cex.sub = 0.75, font.sub = 3, col.sub = "black");
 	
 	box(lty = 1, col = 'black')
 	grid(NA,NULL,lwd=1);

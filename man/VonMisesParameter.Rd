@@ -37,7 +37,7 @@ VonMisesParameter(azimuths)
 }
 \examples{
    FileName<-system.file("data/RectangularData.txt", package="VecStatGraphs2D")
-   dat<-LoadData(FileName, Type=1, Direction=2)
+   dat<-LoadData(FileName, Type=2, Direction=2)
    azimuths<-dat[,2]
    VonMisesParameter(azimuths)
 }

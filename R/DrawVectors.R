@@ -12,7 +12,7 @@ function(measured_data_,real_data_){ #PODER CAMBIAR TAMAÑO DE LAS FLECHAS
 	center_y=0;
 	
     plot(range(length_x_min,length_x_max),range(length_y_min,length_y_max),type="n",xlab="", ylab="", bty="n",axes=FALSE);
-	title(main="VECTORS",sub="Vectors are represented by arrows. \n The arrow defines the direction, and the length of the arrow \n defines the module of the vector.",cex.sub = 0.75, font.sub = 3, col.sub = "black");
+	#title(main="VECTORS",sub="Vectors are represented by arrows. \n The arrow defines the direction, and the length of the arrow \n defines the module of the vector.",cex.sub = 0.75, font.sub = 3, col.sub = "black");
 	
 	box(lty = 1, col = 'black')
 	grid(lwd=1);

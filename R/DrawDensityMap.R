@@ -9,9 +9,9 @@ function(data_x,data_y,PercentageOutliers = 5, PaintPoint = FALSE, Div = 250, Ha
 	f1 <- kde2d(data_[,1], data_[,2], n = Div, lims =c(min(data_[,1]),max(data_[,1]),min(data_[,2]),max(data_[,2])))
 	
 	ramp <- colorRamp(c("white","yellow","red"))
-	colo = rgb( ramp(seq(0, 1, length = 13)), max = 255)
+	colo = rgb( ramp(seq(0, 1, length = 13)), maxColorValue = 255)
 	image(f1,col=colo)
-	title(main="DENSITY MAP",sub="The density map is calculated by \n means of describers of Kernels.",cex.sub = 0.75, font.sub = 3, col.sub = "black");
+	#title(main="DENSITY MAP",sub="The density map is calculated by \n means of describers of Kernels.",cex.sub = 0.75, font.sub = 3, col.sub = "black");
 	box(lty = 1, col = 'black')
 	
 	if(PaintAxis==TRUE){

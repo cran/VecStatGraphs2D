@@ -3,7 +3,7 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Graphic representation of the vectors}
 \description{
-   This function creates a graph that shows an arrow for each vector. The graph represents the situation of every vector by its coordinates. To represent this graph, the input data must be of the measured and real type (type=3).
+   This function creates a graph that shows an arrow for each vector. The graph represents the situation of every vector by its coordinates. To represent this graph, the input data must be of the measured and real type (Type=3).
 }
 \usage{
 DrawVectors(measured_data_, real_data_)
@@ -33,7 +33,7 @@ DrawVectors(measured_data_, real_data_)
 }
 \examples{
    FileName<-system.file("data/MeasuredRealData.txt", package="VecStatGraphs2D")
-   dat<-LoadData(FileName, Type=3, Direction=2)
+   dat<-LoadData(FileName, Type=1, Direction=2)
    measured_data_<-dat[,6:7]
    real_data_<-dat[,8:9]
    DrawVectors(measured_data_, real_data_)

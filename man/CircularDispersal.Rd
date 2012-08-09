@@ -18,7 +18,7 @@ CircularDispersal(azimuths)
    In the case of uniform distribution, this value is infinite, and with values close to 0, a highly concentrated data distribution is expected.
 }
 \value{
-    The value cirular dispersal of all input azimuths.
+    The value circular dispersal of all input azimuths.
 }
 \references{
    Fisher N.I. (1995) Statistical analysis of circular data. Cambridge. Cambridge University Press.
@@ -37,7 +37,7 @@ CircularDispersal(azimuths)
 }
 \examples{
    FileName<-system.file("data/RectangularData.txt", package="VecStatGraphs2D")
-   dat<-LoadData(FileName, Type=1, Direction=2)
+   dat<-LoadData(FileName, Type=2, Direction=2)
    azimuths<-dat[,2]
    CircularDispersal(azimuths)
 }

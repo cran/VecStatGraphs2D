@@ -6,6 +6,6 @@ function(azimuths){
 		RSub2=((CSub2^2+SSub2^2)^0.5);
 		R=MeanModule(azimuths)
 		result=(1-RSub2)/(2*R^2);
-		return(round(result,4));
+		return(round(RSub2, 4));
 	}
 

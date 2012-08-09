@@ -35,7 +35,7 @@ NumberOfElements(modules)
 }
 \examples{
    FileName<-system.file("data/RectangularData.txt", package="VecStatGraphs2D")
-   dat<-LoadData(FileName, Type=1, Direction=2)
+   dat<-LoadData(FileName, Type=2, Direction=2)
    modules<-dat[,1]
    NumberOfElements(modules)
 }

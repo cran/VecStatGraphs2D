@@ -3,7 +3,7 @@
 \alias{VecStatGraphs2D}
 \docType{package}
 \title{
-Vector analysis using graphical and analytical methods in 2D.
+Vector analysis using graphical and analytical methods in 2D
 }
 \description{
     This package performs a 2D statistical analysis, both numerical and graphic, of a set of vectors. Because a vector has two components, module and azimuth, vector analysis is performed in three stages. First, modules are analyzed using linear statistics. Second, azimuths are analyzed by circular statistics. Third a joint analysis of modules and azimuths is performed using density maps that allow detection of other distribution properties (i.e. anisotropy) and outliers. Tests and circular statistic parameters are accompanied by a full range of graphing: histograms, maps of distributions, point maps, vector maps, density maps, distribution modules and azimuths.
@@ -13,7 +13,7 @@ Vector analysis using graphical and analytical methods in 2D.
 Package: \tab VecStatGraphs2D\cr
 Type: \tab Package\cr
 Version: \tab 1.4\cr
-Date: \tab 2011-05-10\cr
+Date: \tab 2012-08-09\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab yes\cr
 }
@@ -22,7 +22,7 @@ LazyLoad: \tab yes\cr
 \author{
    Juan Carlos Ruiz Cuetos, Maria Eugenia Polo Garcia, Pablo Garcia Rodriguez.
 
-   Maintainer: Juan Carlos Ruiz Cuetos <bilba_t@hotmail.com>, Pablo Garcia Rodriguez <pablogr@unex.es>
+   Maintainer: Pablo Garcia Rodriguez <pablogr@unex.es>
 }
 \references{
    Bachelet E. (1981) Circular statistics in biology. London. London Academic Press.

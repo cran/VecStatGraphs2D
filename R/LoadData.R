@@ -1,27 +1,29 @@
 LoadData <-
-function(FileName, Type = 1, Direction = 2){
+function(FileName, Type = 2, Direction = 2){
 	data_=ReadFromFile(FileName);
     if(length(data_) > 1){
       if(CorrectType(Type,data_) == FALSE){
-        switch (Type,print("Error, the file is not of Rectangular type"),
-                print("Error, the file is not of Polar coordinates type"),
-                print("Error, the file is not of (X origin, Y origin) - (X end, Y end) type"));
+        switch (Type,print("Error, the file is not of (X origin, Y origin) - (X end, Y end) type"),
+			print("Error, the file is not of Rectangular type"),
+            	print("Error, the file is not of Polar coordinates type"),
+                );
       }    
       else {  
         switch(Direction,dir_<-0,dir_<-1);        
         if(Type==1){
-          polar_vectors=VectorsToPolar(data_,dir_);	
-          rectangular_vectors=data_;
-		}
-        if(Type==2){
-          rectangular_vectors=VectorsToRectangular(data_,dir_);
-          polar_vectors=data_;
-		}
-        if(Type==3){
           error=ToCalculateError(data_);
           polar_vectors=VectorsToPolar(error,dir_);
           rectangular_vectors=error;
         }
+	  if(Type==2){
+          polar_vectors=VectorsToPolar(data_,dir_);	
+          rectangular_vectors=data_;
+		}
+        if(Type==3){
+          rectangular_vectors=VectorsToRectangular(data_,dir_);
+          polar_vectors=data_;
+		}
+        
         
         num_data=dim(data_);
         res=matrix(nrow=num_data[1],ncol=9); 
@@ -32,7 +34,7 @@ function(FileName, Type = 1, Direction = 2){
         res[1,5]=Direction;
         res[2,5]=Type;
         res[3,5]=1111;
-        if(Type==3){
+        if(Type==1){
           res[3,5]=9999;
           res[,6]=data_[,1];
           res[,7]=data_[,2];

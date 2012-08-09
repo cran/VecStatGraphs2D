@@ -22,7 +22,7 @@ function(data_x,data_y,Direction = 2){
 	center_x=0;
 	center_y=0;
 	plot(range(length_,-length_),range(length_,-length_), type="n",xlab="", ylab="", bty="n",col.axis="white");
-	title(main="MODULE AND AZIMUTHS DISTRIBUTION",sub="Every line corresponds to a single \n observation (module and azimuth)",cex.sub = 0.75, font.sub = 3, col.sub = "black");
+	#title(main="MODULE AND AZIMUTHS DISTRIBUTION",sub="Every line corresponds to a single \n observation (module and azimuth)",cex.sub = 0.75, font.sub = 3, col.sub = "black");
 	
 	box(lty = 1, col = 'black')
 	grid();

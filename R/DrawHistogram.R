@@ -1,5 +1,5 @@
 DrawHistogram <-
-function(azimuths, TamClasses = 15, Direction = 2){
+function(azimuths, ClassSize = 15, Direction = 2){
 	
 	if(Direction==1){
 			type=0;
@@ -8,7 +8,7 @@ function(azimuths, TamClasses = 15, Direction = 2){
 			type=1;
 	}
 	
-	histogram<-Histogram(azimuths,TamClasses);
+	histogram<-Histogram(azimuths,ClassSize);
 	
 	plot.new();
 	par(fg="white");
@@ -22,7 +22,7 @@ function(azimuths, TamClasses = 15, Direction = 2){
 	center_x=0;
 	center_y=0;
 	plot(range(length_,-length_),range(length_,-length_), type="n",xlab="", ylab="", bty="n",col.axis="white");
-	title(main="HISTOGRAM",sub="A histogram is wrapped around the circle. \n Each section of the histogram depicts the number\n of observations falling within that portion of the range",cex.sub = 0.75, font.sub = 3, col.sub = "black");
+	#title(main="HISTOGRAM",sub="A histogram is wrapped around the circle. \n Each section of the histogram depicts the number\n of observations falling within that portion of the range",cex.sub = 0.75, font.sub = 3, col.sub = "black");
 	
 	
 	box(lty = 1, col = 'black')
@@ -82,5 +82,6 @@ function(azimuths, TamClasses = 15, Direction = 2){
 	text(center_x-d2,center_y,paste(d2,"%"),adj = c(0,0), cex=0.6, col="black",font=1,offset=0.1,pos=3);
 	text(center_x-d3,center_y,paste(d3,"%"),adj = c(0,0), cex=0.6, col="black",font=1,offset=0.1,pos=3);
 	text(center_x-d4,center_y,paste(d4,"%"),adj = c(0,0), cex=0.6, col="black",font=1,offset=0.1,pos=3);
+
 }
 

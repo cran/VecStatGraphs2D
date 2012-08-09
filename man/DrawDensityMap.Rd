@@ -51,7 +51,7 @@ The parameter Div is very important because a very large value will lead to the 
 } 
 \examples{ 
   FileName<-system.file("data/RectangularData.txt", package="VecStatGraphs2D") 
-  dat<-LoadData(FileName, Type=1, Direction=2) 
+  dat<-LoadData(FileName, Type=2, Direction=2) 
   X_coordinate<-dat[,3] 
   Y_coordinate<-dat[,4] 
   DrawDensityMap(X_coordinate, Y_coordinate, PaintPoint = TRUE, Div=200) 

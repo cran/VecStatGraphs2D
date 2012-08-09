@@ -11,15 +11,15 @@ function(azimuths){
 			}
 		
 		if((sin_>0)&&(cos_<0)){
-			azimuth=azimuth+180;
+			azimuth=azimuth+pi;
 			}
 		
 		if((sin_<0)&&(cos_>0)){
-			azimuth=azimuth+360;
+			azimuth=azimuth+2*pi;
 			}
 		
 		if((sin_<0)&&(cos_<0)){
-			azimuth=azimuth+180;
+			azimuth=azimuth+pi;
 			}
 		
 		return(round(azimuth,4));

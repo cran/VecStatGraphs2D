@@ -45,7 +45,7 @@ One way to obtain a set of X and Y coordinates of the vectors is to use the
 }
 \examples{
    FileName<-system.file("data/RectangularData.txt", package="VecStatGraphs2D")
-   dat<-LoadData(FileName, Type=1, Direction=2)
+   dat<-LoadData(FileName, Type=2, Direction=2)
    X_coordinate<-dat[,3]
    Y_coordinate<-dat[,4]
    DrawModuleAndAzimuthDistribution(X_coordinate, Y_coordinate, Direction=2)
