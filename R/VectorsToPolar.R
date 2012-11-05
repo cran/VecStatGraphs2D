@@ -8,12 +8,12 @@ function(vectors,init){
 		
 		module=sqrt(x*x + y*y);
 		
-		if(init==0){
+		if(init==1){
 			grades=ToSexagesimal(atan(y/x));
 			gradesBool <- x >= 0;
 		}
 		
-		if(init==1){
+		if(init==2){
 			grades=ToSexagesimal(atan(x/y));
 			gradesBool <- y >= 0;
 		}

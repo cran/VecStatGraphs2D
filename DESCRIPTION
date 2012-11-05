@@ -1,9 +1,9 @@
 Package: VecStatGraphs2D
 Type: Package
 Title: Vector analysis using graphical and analytical methods in 2D
-Version: 1.5
-Date: 2012-08-09
-Author: Ruiz-Cuetos, J.C., Polo, M.E., Rodriguez, P.G.
+Version: 1.6
+Date: 2012-11-05
+Author: Ruiz-Cuetos J.C., Polo M.E., Rodriguez P.G.
 Maintainer: Pablo Garcia Rodriguez <pablogr@unex.es>
 Depends: R (>= 2.10.1), MASS
 Description: This package performs a 2D statistical analysis, both
@@ -20,5 +20,5 @@ Description: This package performs a 2D statistical analysis, both
 License: GPL-3
 URL: http://gim.unex.es/VecStatGraphs2D/
 Repository: CRAN
-Packaged: 2012-08-09 20:02:48 UTC; root
-Date/Publication: 2012-08-13 11:22:00
+Packaged: 2012-11-09 10:48:42 UTC; root
+Date/Publication: 2012-11-10 07:36:35

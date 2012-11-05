@@ -8,18 +8,19 @@ function(azimuths){
 		
 		#Azimuth calculated is a value between 0º-90º, but is posible that is other quadrant.
 		if((sin_>0)&&(cos_>0)){
+			azimuth=azimuth;
 			}
 		
 		if((sin_>0)&&(cos_<0)){
-			azimuth=azimuth+pi;
+			azimuth=azimuth+180;
 			}
 		
 		if((sin_<0)&&(cos_>0)){
-			azimuth=azimuth+2*pi;
+			azimuth=azimuth+360;
 			}
 		
 		if((sin_<0)&&(cos_<0)){
-			azimuth=azimuth+pi;
+			azimuth=azimuth+180;
 			}
 		
 		return(round(azimuth,4));

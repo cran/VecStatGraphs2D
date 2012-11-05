@@ -9,7 +9,7 @@ function(FileName, Type = 2, Direction = 2){
                 );
       }    
       else {  
-        switch(Direction,dir_<-0,dir_<-1);        
+        switch(Direction,dir_<-1,dir_<-2);        
         if(Type==1){
           error=ToCalculateError(data_);
           polar_vectors=VectorsToPolar(error,dir_);

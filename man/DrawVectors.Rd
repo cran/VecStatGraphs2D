@@ -3,18 +3,18 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Graphic representation of the vectors}
 \description{
-   This function creates a graph that shows an arrow for each vector. The graph represents the situation of every vector by its coordinates. To represent this graph, the input data must be of the measured and real type (Type=3).
+   This function creates a graph that shows an arrow for each vector. The graph represents the situation of every vector by its coordinates. To represent this graph, the input data must be the cartesian coordinates (Type = 1).
 }
 \usage{
-DrawVectors(measured_data_, real_data_)
+DrawVectors(final_data_, initial_data_)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{measured_data_}{Matrix containing the measured coordinates}
-  \item{real_data_}{Matrix containing the real coordinates}
+  \item{final_data_}{Matrix containing the coordinates of the final data}
+  \item{initial_data_}{Matrix containing the coordinates of the initial data}
 }
 \details{
-   The measured values and real values cannot be calculated. They must be introduced as input data, although it is advisable to use \code{\link{LoadData}} for obtain the vectors of the X and Y coordinates as well as the azimuths of the measured values.
+   The cartesian coordinates cannot be calculated. They must be introduced as input data, although it is advisable to use \code{\link{LoadData}} for obtain the vectors of the X and Y coordinates as well as the azimuths of the final values.
 }
 \value{
    This function returns no value and creates a graph that represents the vectors of the input data.
@@ -34,9 +34,9 @@ DrawVectors(measured_data_, real_data_)
 \examples{
    FileName<-system.file("data/MeasuredRealData.txt", package="VecStatGraphs2D")
    dat<-LoadData(FileName, Type=1, Direction=2)
-   measured_data_<-dat[,6:7]
-   real_data_<-dat[,8:9]
-   DrawVectors(measured_data_, real_data_)
+   final_data_<-dat[,6:7]
+   initial_data_<-dat[,8:9]
+   DrawVectors(final_data_, initial_data_)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

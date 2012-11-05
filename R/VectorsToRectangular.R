@@ -14,7 +14,7 @@ function(vectors,init){
 			x=y1;
 			y=x1;
 		}
-		else{
+		if(init==2){
 			x=x1;
 			y=y1;
 		}

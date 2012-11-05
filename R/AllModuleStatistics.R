@@ -16,7 +16,7 @@ function(modules){
 		
 		print("************************************************************");
 		print("****                                                    ****");
-		print("****            CIRCULAR STATISTICS - MODULE            ****");
+		print("****            LINEAR STATISTICS - MODULE              ****");
 		print("****                                                    ****");
 		print("************************************************************");
 	

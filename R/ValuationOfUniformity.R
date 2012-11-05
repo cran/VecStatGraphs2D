@@ -22,7 +22,7 @@ function(azimuths){
 		plot.new();
 		par(fg="white");
 		plot(z[1,],z[2,],type="p",col="Blue",ylab="",pch=16, xlab="",col.axis="black");#All points are drawn.
-		title(main="GRAPHICAL ASSESSMENT OF UNIFORMITY",sub="The points should lie roughly along 45 grades line \n passing through (0,0) if the uniform model is correct.",cex.sub = 0.75, font.sub = 3, col.sub = "black");
+		#title(main="GRAPHICAL ASSESSMENT OF UNIFORMITY",sub="The points should lie roughly along 45 grades line \n passing through (0,0) if the uniform model is correct.",cex.sub = 0.75, font.sub = 3, col.sub = "black");
 	
 		box(lty = 1, col = 'black'); 
 		grid();

@@ -12,8 +12,8 @@ Vector analysis using graphical and analytical methods in 2D
 \tabular{ll}{
 Package: \tab VecStatGraphs2D\cr
 Type: \tab Package\cr
-Version: \tab 1.4\cr
-Date: \tab 2012-08-09\cr
+Version: \tab 1.6\cr
+Date: \tab 2012-11-05\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab yes\cr
 }
