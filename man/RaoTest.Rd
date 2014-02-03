@@ -24,12 +24,12 @@ RaoTest(azimuths, Alpha = 0.01)
    }
 }
 \value{
-  Returns the probability value and indicates whether the hypothesis of uniformity can be accepted.
+  Returns the p-value and indicates whether the hypothesis of uniformity can be accepted.
 }
 \references{
    Bachelet E. (1981) Circular statistics in biology. London. London Academic Press.
 
-   Jammalamadaka S.R., Sengupta A. (2001) Topic in circular statistics. Singapore. World Scientific Publihing.
+   Jammalamadaka S.R., Sengupta A. (2001) Topic in circular statistics. Singapore. World Scientific Publishing.
 
    Mardia K.V. , Jupp, P.E. (2000) Directional statistics. Chichester. Wiley.
 
@@ -37,17 +37,19 @@ RaoTest(azimuths, Alpha = 0.01)
 
  Website \url{http://gim.unex.es/VecStatGraphs2D/}
 } 
-\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
+\author{Ruiz-Cuetos, J.C., \email{jcruizcue@gmail.com}, Felicisimo, A.M., \email{amfeli@unex.es}, 
+Cuartero, A., \email{acuartero@unex.es}, Polo, M.E., \email{mepolo@unex.es}, 
+Rodriguez, P.G. \email{pablogr@unex.es}}
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-   \code{\link{ValuationOfUniformity}}, \code{\link{RayleighTest}}.
+   \code{\link{DrawQQPlot}}, \code{\link{RayleighTest}}.
 }
 \examples{
    FileName<-system.file("data/RectangularData.txt", package="VecStatGraphs2D")
-   dat<-LoadData(FileName, Type=2, Direction=2)
+   dat<-LoadData(FileName, Type=2)
    azimuths<-dat[,2]
    RaoTest(azimuths, Alpha = 0.01)
 }

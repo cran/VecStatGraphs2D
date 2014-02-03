@@ -1,31 +1,32 @@
-\name{DrawDistribution}
-\alias{DrawDistribution}
+\name{DrawAzimuthDensity}
+\alias{DrawAzimuthDensity}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Graphic representation of the distribution of the azimuths}
+\title{Graphical representation of the azimuth density}
 \description{
-This function creates a graph that represents the distribution of the azimuths. Every azimuth is plotted as a blue point in a unit circle. The mean azimuth is represented by a red arrow. A 95 percentage confidence interval for the mean azimuth is plotted in red. When the data concentration is too low (von Mises parameter below 0.9) the mean azimuth is not plotted. This confidence interval depends on the mean module, the number of azimuths and the von Mises parameter.
+This function creates a graph that represents a circular graphic when the data azimuths densities are represented by color bands. A vector is drawn representing the mode azimuth.
 }
 \usage{
-DrawDistribution(azimuths, SVGf = 0)
+DrawAzimuthDensity(azimuths, Period = 15, SVGf = 0)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{azimuths}{Vector containing the values of the azimuths}
+  \item{Period}{Integer value which represents the number of moving average terms} 
   \item{SVGf}{Integer value. If SVGf = 0, the plot is showed only in the graphic window. If SVGf = 1, then the plot is saved as SVG graphic. The default value is 0.} 
 }
 \details{
-   With this function, the positions of the largest and smallest concentrations of points can be observed. 
-   
-   One way to obtain a set of azimuths from X and Y coordinates of the vectors is to use the \code{\link{LoadData}} function.
+   With this function, a circular graphic is obtained, representing azimuths densities by color bands.
    
    Typical usages are \preformatted{
-    DrawDistribution(azimuths, \dots)
+    DrawAzimuthDensity(azimuths, ...)
+    DrawAzimuthDensity(azimuths, Period = 15, ...)
+    DrawAzimuthDensity(azimuths, Period = 15, SVGf = 0)
     ......
    }
    
 }
 \value{
-   This function returns no value and creates a graph that represents the distribution of the input data.
+   This function returns a no value and creates a graph that represents the density of the azimuths.
 }
 \references{
     Website \url{http://gim.unex.es/VecStatGraphs2D/}
@@ -37,7 +38,7 @@ Rodriguez, P.G. \email{pablogr@unex.es}}
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-   \code{\link{DrawAzimuthDensity}}, \code{\link{DrawHistogram}}, \code{\link{DrawPoints}}, 
+\code{\link{DrawDistribution}}, \code{\link{DrawHistogram}}, \code{\link{DrawPoints}}, 
 
 \code{\link{DrawModuleAndAzimuthDistribution}}, \code{\link{DrawDensityMap}}, \code{\link{DrawVectors}}.
 }
@@ -45,7 +46,7 @@ Rodriguez, P.G. \email{pablogr@unex.es}}
    FileName<-system.file("data/RectangularData.txt", package="VecStatGraphs2D")
    dat<-LoadData(FileName, Type=2)
    azimuths<-dat[,2]
-   DrawDistribution(azimuths, SVGf=0)
+   DrawAzimuthDensity(azimuths, Period = 15, SVGf=0)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

@@ -6,13 +6,14 @@
    This function creates a graph that shows an arrow for each vector. The graph represents the situation of every vector by its coordinates. To represent this graph, the input data must be the cartesian coordinates (Type = 1).
 }
 \usage{
-DrawVectors(final_data_, initial_data_)
+DrawVectors(data, SVGf=0)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{final_data_}{Matrix containing the coordinates of the final data}
-  \item{initial_data_}{Matrix containing the coordinates of the initial data}
-}
+  \item{data}{Matrix containing the coordinates of the final and initial data}
+  \item{SVGf}{Integer value. If SVGf = 0, the plot is showed only in the graphic window. If SVGf = 1, then the plot is saved as SVG graphic. The default value is 0.} 
+} 
+
 \details{
    The cartesian coordinates cannot be calculated. They must be introduced as input data, although it is advisable to use \code{\link{LoadData}} for obtain the vectors of the X and Y coordinates as well as the azimuths of the final values.
 }
@@ -22,21 +23,23 @@ DrawVectors(final_data_, initial_data_)
 \references{
    Website \url{http://gim.unex.es/VecStatGraphs2D/}
 }
-\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
+\author{Ruiz-Cuetos, J.C., \email{jcruizcue@gmail.com}, Felicisimo, A.M., \email{amfeli@unex.es}, 
+Cuartero, A., \email{acuartero@unex.es}, Polo, M.E., \email{mepolo@unex.es}, 
+Rodriguez, P.G. \email{pablogr@unex.es}}
 
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-   \code{\link{DrawHistogram}}, \code{\link{DrawDistribution}}, \code{\link{DrawPoints}}, \code{\link{DrawModuleAndAzimuthDistribution}},
-   \code{\link{DrawDensityMap}}.
+   \code{\link{DrawAzimuthDensity}}, \code{\link{DrawHistogram}}, \code{\link{DrawDistribution}}, 
+\code{\link{DrawPoints}}, \code{\link{DrawModuleAndAzimuthDistribution}}, \code{\link{DrawDensityMap}}.
 }
+
 \examples{
    FileName<-system.file("data/MeasuredRealData.txt", package="VecStatGraphs2D")
-   dat<-LoadData(FileName, Type=1, Direction=2)
-   final_data_<-dat[,6:7]
-   initial_data_<-dat[,8:9]
-   DrawVectors(final_data_, initial_data_)
+   dat<-LoadData(FileName, Type=1)
+   data<-dat[,1:8]
+   DrawVectors(data, SVGf=0)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

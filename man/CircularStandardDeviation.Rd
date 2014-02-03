@@ -23,19 +23,22 @@ CircularStandardDeviation(azimuths)
    
    Website \url{http://gim.unex.es/VecStatGraphs2D/} 
 }
-\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
-
+\author{Ruiz-Cuetos, J.C., \email{jcruizcue@gmail.com}, Felicisimo, A.M., \email{amfeli@unex.es}, 
+Cuartero, A., \email{acuartero@unex.es}, Polo, M.E., \email{mepolo@unex.es}, 
+Rodriguez, P.G. \email{pablogr@unex.es}}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
    \code{\link{MeanModule}}, \code{\link{MeanAzimuth}}, \code{\link{CircularVariance}},
-   \code{\link{CircularDispersal}}, \code{\link{KurtosisAzimuthCoefficient}}, \code{\link{VonMisesParameter}},
-   \code{\link{SkewnessAzimuthCoefficient}}, \code{\link{AllAzimuthStatistics}}.
+   
+\code{\link{CircularDispersal}}, \code{\link{KurtosisAzimuthCoefficient}}, \code{\link{VonMisesParameter}},
+   
+\code{\link{SkewnessAzimuthCoefficient}}, \code{\link{AllAzimuthStatistics}}.
 }
 \examples{
    FileName<-system.file("data/RectangularData.txt", package="VecStatGraphs2D")
-   dat<-LoadData(FileName, Type=2, Direction=2)
+   dat<-LoadData(FileName, Type=2)
    azimuths<-dat[,2]
    CircularStandardDeviation(azimuths)
 }

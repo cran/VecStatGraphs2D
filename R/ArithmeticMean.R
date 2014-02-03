@@ -1,5 +1,5 @@
 ArithmeticMean <-
 function(modules){
-	    return(round(ModuleSum(modules)/NumberOfElements(modules),4));
+	    return(round(sum(modules)/NumberOfElements(modules),4));
     }
 

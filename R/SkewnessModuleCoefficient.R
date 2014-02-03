@@ -1,8 +1,7 @@
-SkewnessModuleCoefficient <-
-function(modules){
-	  	m_arit=ArithmeticMean(modules);
-	    n=NumberOfElements(modules);
-	    s=ModuleStandardDeviation(modules);
-		return(round((n/((n-1)*(n-2)))*(sum(((modules-m_arit)/s)^3)),4));
-	}
-
+SkewnessModuleCoefficient <- function (modules) 
+{
+    n = length(modules)
+	mean = sum(modules) / n
+    s = ModuleStandardDeviation(modules)
+    return((n / ((n - 1) * (n - 2))) * (sum(((modules - mean)/s)^3)))
+}

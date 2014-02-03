@@ -1,17 +1,18 @@
-\name{ValuationOfUniformity}
-\alias{ValuationOfUniformity}
+\name{DrawQQPlot}
+\alias{DrawQQPlot}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Graphical assessment of uniformity}
 \description{
    This function generates a graph that allows one to determine quickly the azimuths distribution can be considered uniform.
 }
 \usage{
-ValuationOfUniformity(azimuths)
+DrawQQPlot(azimuths, SVGf=0)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{azimuths}{Vector containing the values of the azimuths}
-}
+  \item{SVGf}{Integer value. If SVGf = 0, the plot is showed only in the graphic window. If SVGf = 1, then the plot is saved as SVG graphic. The default value is 0.} 
+} 
 \details{
    The graphic is created by placing in increasing order of n pairs of points from the calculation of the linear order statistics of the azimuths.
    
@@ -29,8 +30,9 @@ ValuationOfUniformity(azimuths)
    
     Website \url{http://gim.unex.es/VecStatGraphs2D/}
 } 
-\author{Ruiz-Cuetos, J.C., \email{bilba_t@hotmail.com}, Polo, M.E., \email{mepolo@unex.es}, Rodriguez, P.G. \email{pablogr@unex.es}}
-
+\author{Ruiz-Cuetos, J.C., \email{jcruizcue@gmail.com}, Felicisimo, A.M., \email{amfeli@unex.es}, 
+Cuartero, A., \email{acuartero@unex.es}, Polo, M.E., \email{mepolo@unex.es}, 
+Rodriguez, P.G. \email{pablogr@unex.es}}
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
@@ -39,9 +41,9 @@ ValuationOfUniformity(azimuths)
 }
 \examples{
    FileName<-system.file("data/RectangularData.txt", package="VecStatGraphs2D")
-   dat<-LoadData(FileName, Type=2, Direction=2)
+   dat<-LoadData(FileName, Type=2)
    azimuths<-dat[,2]
-   ValuationOfUniformity(azimuths)
+   DrawQQPlot(azimuths, SVGf=0)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

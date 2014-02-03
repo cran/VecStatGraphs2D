@@ -1,46 +1,125 @@
-DrawPoints <-
-function(data_x,data_y,PercentageOutliers = 5, HarmonicMean = FALSE){
+DrawPoints <- function (data_x, data_y, PercentageOutliers = 5, SVGf = 0) 
+{
+  # Plots a graphic of the end nodes of the vectors from a common origin (0,0)  
+  #
+  # Args:
+  #   data_x : vector components (increments) over the X axis
+  #   data_y : vector components (increments) over the Y axis
+  #   SVG: 
+  #     0: the plot is showed only un the graphic window 
+  #     1: the plot is saved as SVG graphic 
+  #   
+  # Returns:
+  #   Plot the graphic and/or save the graphic as SVG
+  #
+	
+ if (SVGf == 1) {
+   SVGfiles <- list.files(path=getwd(), pattern=glob2rx("figure*.SVG"), ignore.case=TRUE)
+   nfiles = length(SVGfiles)
+ 
+   if (nfiles == 0) {
+     fileSVGname = "figure1.SVG"
+   }
+   else {
+	 newnum = nfiles + 1
+     fileSVGname = paste("figure",newnum,".SVG", sep = "")
+   }
+  svg(fileSVGname, width= 8, height=8)
+ }
 
-	data_=array(c(data_x,data_y),dim=c(length(data_x),2))
-	if(HarmonicMean == FALSE){
-		Vec1=VectorsToPolar(data_,1);
-		Vec=Vec1[,1];
-	}
-	else{
-		Vec=AllHarmonicMean(data_);
-	}
-		
-	plot.new();
-	par(fg="white");
-	
-	length_x_max=max(data_[,1]);
-	length_y_max=max(data_[,2]);
-    length_x_min=min(data_[,1]);
-    length_y_min=min(data_[,2]);
-	center_x=0;
-	center_y=0;
-	
-	plot(range(length_x_min,length_x_max),range(length_y_min,length_y_max),type="p",xlab="", ylab="", bty="n",axes=FALSE);
-	#title(main="POINTS",sub=paste("End nodes of the error vectors form a cloud of points. \n Outliers are plotted in red.",PercentageOutliers,"% points with value." ),cex.sub = 0.75, font.sub = 3, col.sub = "black");
-	
-	box(lty = 1, col = 'black')
-	grid(NA,NULL,lwd=1);
-	axis(side=1,pos=0,col="grey",at=seq(length=length_x_max, from=0, by=10),cex.axis=0.55,font.axis=3);
-	axis(side=1,pos=0,col="grey",at=seq(length=abs(length_x_min), from=0, by=-10),cex.axis=0.55,font.axis=3);
-	axis(side=2,pos=0,col="grey",at=seq(length=length_y_max, from=0, by=10),las=1,cex.axis=0.55,font.axis=3);
-	axis(side=2,pos=0,col="grey",at=seq(length=abs(length_y_min), from=0, by=-10),las=1,cex.axis=0.55,font.axis=3);
-	
-    cant=as.integer(length(data_[,1])*(PercentageOutliers/100));
-	data_=data_[ order(Vec,decreasing=TRUE), ]
-	
+  plot.new()
+  par(fg="white", mar=c(0,0,0,0)) 
 
-	for(i in 1:length(data_[,1])){
-	 	if(i>cant){
-          	points(data_[i,1],data_[i,2],cex=0.5,col="Black",pch=19);
-		}
-		else{
-		   	points(data_[i,1],data_[i,2],cex=0.5,col="Red",pch=19);
-		}
-	}
+  num_data = length(data_x)
+  x = data_x
+  y = data_y
+  module = sqrt(x * x + y * y)
+  max_ = max(module) + 1
+
+  scale_factor = 24 / max_
+
+  d1 = round(max_ * scale_factor)
+  d2 = round(d1 * 0.75)
+  d3 = round(d1 * 0.50)
+  d4 = round(d1 * 0.25)
+
+  length_ = d1 + 10
+  center_x = 0
+  center_y = 0
+  plot(range(length_, -length_), range(length_, -length_), type = "n",
+    axes = FALSE, ann = FALSE)
+
+  DrawCircle(0, 0, d1, border = "black", lty = 1, lwd = 1)
+  DrawCircle(0, 0, d2, border = "black", lty = 1, lwd = 1)
+  DrawCircle(0, 0, d3, border = "black", lty = 1, lwd = 1)
+  DrawCircle(0, 0, d4, border = "black", lty = 1, lwd = 1)
+
+  # diagonal lines and labels
+
+  x1 = cos(ToRadians(45)) * d1 
+  y1 = sin(ToRadians(45)) * d1 
+
+  segments(-x1, -y1, x1, y1, col = "black", lwd = 2) 
+  segments(x1, -y1, -x1, y1, col = "black", lwd = 2)
+
+  text(x1, y1, "45",  adj = c(-0.25, -0.25), col = "black", cex = 1.25)
+  text(x1, -y1, "135", adj = c(-0.25, 1), col = "black", cex = 1.25)
+  text(-x1, y1, "315", adj = c(1.25, -0.25), col = "black", cex = 1.25)
+  text(-x1, -y1, "225", adj = c(1.25, 1.25), col = "black", cex = 1.25)
+
+  # vertical and horizontal lines and labels
+
+  segments(center_x, center_y - d1, center_x, center_y + d1, col = "black", lwd = 2)
+  segments(center_x + d1, center_y, center_x - d1, center_y, col = "black", lwd = 2)
+
+  # primary labels
+
+  text(center_x, center_y + d1, "0", adj = c(0.5,-1.0), cex = 1.25, col = "black")
+  text(center_x - d1, center_y, "270", adj = c(1.25, 0.25), cex = 1.25, col = "black")
+  text(center_x, center_y - d1, "180", adj = c(0.5, 2.0), cex = 1.25, col = "black")
+  text(center_x + d1, center_y, "90", adj = c(-0.5, 0.25), cex = 1.25, col = "black")
+
+   # scale labels
+
+  r1 = round(d1 / scale_factor)
+  r2 = round(d2 / scale_factor)
+  r3 = round(d3 / scale_factor)
+  r4 = round(d4 / scale_factor)
+
+    text(center_x, center_y + d1, r1, adj = c(-0.1,1.2), cex = 1, col = "black")
+    text(center_x, center_y + d2, r2, adj = c(-0.1,1.2), cex = 1, col = "black")
+    text(center_x, center_y + d3, r3, adj = c(-0.1,1.2), cex = 1, col = "black")
+    text(center_x, center_y + d4, r4, adj = c(-0.1,1.2), cex = 1, col = "black")
+
+    text(center_x, center_y - d1, r1, adj = c(1.1,-0.5), cex = 1, col = "black")
+    text(center_x, center_y - d2, r2, adj = c(1.1,-0.5), cex = 1, col = "black")
+    text(center_x, center_y - d3, r3, adj = c(1.1,-0.5), cex = 1, col = "black")
+    text(center_x, center_y - d4, r4, adj = c(1.1,-0.5), cex = 1, col = "black")
+
+    #text(center_x + d1, center_y, d1)  # do not plot
+    text(center_x + d2, center_y, r2, adj = c(-0.1,-0.3), cex = 1, col = "black")
+    text(center_x + d3, center_y, r3, adj = c(-0.1,-0.3), cex = 1, col = "black")
+    text(center_x + d4, center_y, r4, adj = c(-0.1,-0.3), cex = 1, col = "black")
+
+    text(center_x - d1, center_y, r1, adj = c(-0.1,-0.3), cex = 1, col = "black")
+    text(center_x - d2, center_y, r2, adj = c(-0.1,-0.3), cex = 1, col = "black")
+    text(center_x - d3, center_y, r3, adj = c(-0.1,-0.3), cex = 1, col = "black")
+    text(center_x - d4, center_y, r4, adj = c(-0.1,-0.3), cex = 1, col = "black")
+
+  # vector end nodes as points
+
+  for (i in 1:(num_data))  { 
+    points(data_x[i] * scale_factor, data_y[i] * scale_factor, cex = 0.5, col = "skyblue3", pch = 19)
+    }
+
+  # label and number of elements
+
+  labp = paste("Sample size, n =", num_data)
+  text(center_x - d1 - 3.5, center_y + d1 + 3.3, labels = labp, pos = 4, col = "black", cex = 1)
+
+  if (SVGf == 1) {
+   dev.off()
+   print(paste("Plot has been saved as SVG graphic file '",fileSVGname,"' in",getwd()))
+  }
+
 }
-

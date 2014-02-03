@@ -1,7 +1,6 @@
-ModuleStandardDeviation <-
-function(modules){
-	    m_arit=ArithmeticMean(modules);
-	    n=NumberOfElements(modules);
-	    return(round(sqrt((sum((modules-m_arit)^2))/(n-1)),4));
-    }
-
+ModuleStandardDeviation <- function (modules) 
+{
+  n = length(modules)
+  mean = sum(modules) / n
+  return(sqrt((sum((modules - mean)^2))/(n - 1)))
+}

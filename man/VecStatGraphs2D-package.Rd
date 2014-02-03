@@ -3,24 +3,24 @@
 \alias{VecStatGraphs2D}
 \docType{package}
 \title{
-Vector analysis using graphical and analytical methods in 2D
+Vectorial analysis using graphical and analytical methods in 2D
 }
 \description{
-    This package performs a 2D statistical analysis, both numerical and graphic, of a set of vectors. Because a vector has two components, module and azimuth, vector analysis is performed in three stages. First, modules are analyzed using linear statistics. Second, azimuths are analyzed by circular statistics. Third a joint analysis of modules and azimuths is performed using density maps that allow detection of other distribution properties (i.e. anisotropy) and outliers. Tests and circular statistic parameters are accompanied by a full range of graphing: histograms, maps of distributions, point maps, vector maps, density maps, distribution modules and azimuths.
+    This package performs a 2D statistical analysis, both numerical and graphical, of a set of vectors. Because a vector has two components, module and azimuth, vector analysis is performed in three stages. First, modules are analyzed using linear statistics. Second, azimuths are analyzed by circular statistics. Third a joint analysis of modules and azimuths is performed using density maps that allow detection of other distribution properties (i.e. anisotropy) and outliers. Tests and circular statistic parameters are accompanied by a full range of graphing: histograms, maps of distributions, point maps, vector maps, density maps, distribution modules and azimuths.
 }
 \details{
 \tabular{ll}{
 Package: \tab VecStatGraphs2D\cr
 Type: \tab Package\cr
-Version: \tab 1.6\cr
-Date: \tab 2012-11-05\cr
+Version: \tab 1.7\cr
+Date: \tab 2014-02-03\cr
 License: \tab GPL-3\cr
 LazyLoad: \tab yes\cr
 }
 
 }
 \author{
-   Juan Carlos Ruiz Cuetos, Maria Eugenia Polo Garcia, Pablo Garcia Rodriguez.
+   Juan Carlos Ruiz Cuetos, Angel Manuel Felicisimo, Aurora Cuartero, Maria Eugenia Polo Garcia, Pablo Garcia Rodriguez.
 
    Maintainer: Pablo Garcia Rodriguez <pablogr@unex.es>
 }
@@ -31,7 +31,7 @@ LazyLoad: \tab yes\cr
 
    Fisher N.I. (1995) Statistical analysis of circular data. Cambridge. Cambridge University Press.
 
-   Jammalamadaka S.R., Sengupta A. (2001) Topic in circular statistics. Singapore. World Scientific Publihing.
+   Jammalamadaka S.R., Sengupta A. (2001) Topic in circular statistics. Singapore. World Scientific Publishing.
 
    Mardia K.V. , Jupp, P.E. (2000) Directional statistics. Chichester. Wiley.
 
@@ -42,8 +42,12 @@ LazyLoad: \tab yes\cr
 
 \keyword{ package }
 \seealso{
-   \code{\link{AllAzimuthStatistics}}, \code{\link{AllModuleStatistics}}, \code{\link{DrawHistogram}}, \code{\link{DrawPoints}}, 
-   \code{\link{DrawModuleAndAzimuthDistribution}}, \code{\link{DrawDensityMap}}, \code{\link{DrawVectors}}, \code{\link{DrawDistribution}}, 
-   \code{\link{RaoTest}}, \code{\link{RayleighTest}}, \code{\link{ValuationOfUniformity}}.
+   \code{\link{AllAzimuthStatistics}}, \code{\link{AllModuleStatistics}}, \code{\link{DrawHistogram}}, \code{\link{DrawPoints}},
+ 
+   \code{\link{DrawModuleAndAzimuthDistribution}}, \code{\link{DrawDensityMap}}, \code{\link{DrawVectors}}, 
+
+   \code{\link{DrawAzimuthDensity}}, \code{\link{DrawDistribution}}, \code{\link{RaoTest}}, \code{\link{RayleighTest}}, 
+
+   \code{\link{DrawQQPlot}}.
 }
 
