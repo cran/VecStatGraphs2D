@@ -81,7 +81,7 @@ DrawDistribution <- function (azimuths, SVGf = 0)
   # accumulated points
    
   for (i in 0:359) {
-    h = his[i + 1, 1] / cbase  # elements/point as a function of absolute frequency of 1º classes
+    h = his[i + 1, 1] / cbase  # elements/point as a function of absolute frequency of first classes
     if (h > 0) {
       for (g in 1:h - 1) { 
         radian = ToRadians(90 - i)  

@@ -29,14 +29,22 @@ LazyLoad: \tab yes\cr
 
    Dixon K. R., Chapman J. A. (1980) Harmonic mean measure of animal activity areas. Ecology 61, 1040-1044.
 
+   Cuartero A., Felicisimo A.M., Polo M.E., Caro A., Rodriguez P.G. (2010) Positional Accuracy Analysis of Satellite Imagery by Circular Statistics.  Photogrammetric Engineering & Remote Sensing (JCR-2010 = 0,926; Category: Imaging Science & Photographic Technology 9/19; second quartile), 76 (11), 1275-1286.
+
+   Cuartero A., Armesto J., Rodriguez P.G., Arias P. (2010) Error Analysis of Terrestrial Laser Scanning Data by Means of Spherical Statistics and 3D Graphs. Sensors (JCR-2010 = 1,771; Category: Instruments & Instrumentation 14/61; first quartile), 10, 10128-10145.
+   
    Fisher N.I. (1995) Statistical analysis of circular data. Cambridge. Cambridge University Press.
 
    Jammalamadaka S.R., Sengupta A. (2001) Topic in circular statistics. Singapore. World Scientific Publishing.
 
    Mardia K.V. , Jupp, P.E. (2000) Directional statistics. Chichester. Wiley.
 
+   Pewsey, A., Neuhauser, M., Ruxton, G. D. (2013). Circular statistics in R. Oxford University Press.
+   
+   Rodriguez P.G., Polo M.E., Cuartero A., Felicisimo A.M., Ruiz-Cuetos J.C. (2014) VecStatGraphs2D, A Tool for the Analysis of Two-Dimensional Vector Data: An Example Using QuikSCAT Ocean Winds. IEEE Geoscience and Remote Sensing Letters (JCR-2012 = 1,823; Category: Remote Sensing 8/27; first quartile), 11(5), 921-925.
+   
    Russell G.S. , Levitin D.J. (1995) An expanded table of probability values for Rao spacing test. Communications in Statistics: Simulation and Computation, 24(4), 879-888.
-
+   
    Website \url{http://gim.unex.es/VecStatGraphs2D/}
 }
 

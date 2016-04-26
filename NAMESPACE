@@ -8,3 +8,10 @@ exportPattern(".")
 import(
   MASS
 )
+
+importFrom("grDevices", "colorRamp", "dev.off", "rgb", "svg")
+importFrom("graphics", "abline", "arrows", "axis", "box", "grid",
+	 "image", "par", "plot", "plot.new", "points", "polygon",
+	 "segments", "text")
+importFrom("stats", "filter")
+importFrom("utils", "glob2rx", "read.table")

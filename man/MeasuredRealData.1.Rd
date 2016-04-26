@@ -1,12 +1,12 @@
-\name{MeasuredRealData}
-\alias{MeasuredRealData}
+\name{MeasuredRealData.1}
+\alias{MeasuredRealData.1}
 
 \docType{data}
 \title{GPS Data Set}
 \description{
 	Dataset obtained with a GPS, UNEX Merida.
 }
-\usage{MeasuredRealData}
+\usage{MeasuredRealData.1}
 \format{A matrix containing 53 observations. }
 
 \references{
